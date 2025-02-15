@@ -395,10 +395,32 @@ sort -k 2 data.txt  → second column sorted
 
 sort -u file.txt  --> Remove duplicates
 
+-n: Sort numerically (useful for sorting numbers).
+
+Example: sort -n file.txt (This sorts the lines numerically.)
+-r: Reverse the order, i.e., sort in descending order.
+
+Example: sort -r file.txt (This will sort the lines in descending order.)
+-k: Sort by a specific column (field).
+
+Example: sort -k2 file.txt (Sorts by the second column, if the file is structured with spaces or tabs separating columns.)
+-u: Only print unique lines (removes duplicates).
+
+Example: sort -u file.txt (This will sort the lines and eliminate duplicates.)
+-t: Define a custom delimiter for columns (if the file uses something other than spaces or tabs).
+
+Example: sort -t, -k2 file.csv (Sorts a CSV file by the second column, assuming , as the delimiter.)
+-f: Perform a case-insensitive sort.
+
+Example: sort -f file.txt (This ignores case when sorting.)
+-o: Redirect the output to a file.
+
+Example: sort file.txt -o sorted_file.txt (This will sort the file and save the output to sorted_file.txt.)
+
 grep
 —---
 grep  "UNix" abc.txt
-grep -i "UNix" abc.txt
+grep -i "UNix" abc.txt -> ignore case sensitive.
 grep -c "unix" abc.txt  find the number of lines that matches
 
 grep -l "unix"  * —>display the files that contain the given string/pattern.
@@ -409,8 +431,8 @@ grep -o "unix" abc.txt  —> only matched content
 grep -n "unix" abc.txt  —> shows the line number
 grep -v "unix" abc.txt  → lines will display without matching
 
-grep -B5 "error" demo.txt
-grep -A5 "error" demo.txt
+grep -B5 "error" demo.txt -> before 
+grep -A5 "error" demo.txt -> after
 grep -C5 "error" demo.txt  → before and after
 
 grep -iR geeks /home/geeks
@@ -1213,22 +1235,37 @@ df -h | awk '{gsub("%", "", $5); if ($5+0 > 18) print $1, $5 "%"}'
 
 
 This prints all filesystems that are over 90% full, which is useful for system monitoring and alerting.
+create the group
+---------------
+sudo groupadd devops
+sudo useradd kiran
+To add an existing user (e.g., kiran) to the newly created group (devops), use the usermod command with the -aG option, which appends the user to the specified group.
+sudo usermod -aG devops kiran
+groups kiran
+it will display 
+kiran : kiran devops
+sudo passwd kiran
+provide the password
+id
 
+providing sudo access to the user
+--------------------------------
+sudo visudo
 
+under this line provide the 
+# User privilege specification
+root    ALL=(ALL:ALL) ALL
+%devops ALL=(ALL) NOPASSWD: ALL
+sudo ls /root
+ test the config
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+how to set hostname
+-------------------
+sudo hostnamectl set-hostname kiranuser
+sudo nano /etc/hosts
+127.0.0.1    localhost
+127.0.1.1    kiranuser
+sudo reboot
 
 wget
 ====
