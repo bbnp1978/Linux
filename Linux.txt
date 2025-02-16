@@ -1241,6 +1241,7 @@ sudo groupadd devops
 sudo useradd kiran
 To add an existing user (e.g., kiran) to the newly created group (devops), use the usermod command with the -aG option, which appends the user to the specified group.
 sudo usermod -aG devops kiran
+if we create the new user user should be added to exisitng groups before that he doesnt get the sudo acceess.
 groups kiran
 it will display 
 kiran : kiran devops
@@ -1255,7 +1256,7 @@ sudo visudo
 under this line provide the 
 # User privilege specification
 root    ALL=(ALL:ALL) ALL
-%devops ALL=(ALL) NOPASSWD: ALL
+%devops ALL=(ALL) NOPASSWD: ALL  # it will provide all the user to get root acess.
 sudo ls /root
  test the config
 
