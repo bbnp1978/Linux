@@ -1238,7 +1238,7 @@ This prints all filesystems that are over 90% full, which is useful for system m
 create the group
 ---------------
 sudo groupadd devops
-sudo useradd kiran
+sudo adduser kiran it will promt the total data of the user u need to enter the details.
 To add an existing user (e.g., kiran) to the newly created group (devops), use the usermod command with the -aG option, which appends the user to the specified group.
 sudo usermod -aG devops kiran
 if we create the new user user should be added to exisitng groups before that he doesnt get the sudo acceess.
