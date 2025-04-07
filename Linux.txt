@@ -160,7 +160,8 @@ It is a collection of instructions
 clear
 -----
 
-The clear command in Linux is used to clear the terminal screen. It removes all previous output and gives you a clean, empty screen to work with.
+The clear command in Linux is used to clear the terminal screen. It removes all previous output and gives you a clean, empty screen to work 
+with.
 
 
 
