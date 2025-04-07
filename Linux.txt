@@ -167,12 +167,14 @@ The clear command in Linux is used to clear the terminal screen. It removes all 
 uname
 —-----
 
-The uname command in Linux is used to display system information. It provides details about the operating system, kernel version, hardware architecture, and more.
+The uname command in Linux is used to display system information. It provides details about the operating system, kernel version, 
+hardware architecture, and more.
 
 
 man [manual pages]
 -----
-The man command in Linux is used to display the manual pages for other commands, programs, and system calls. It's a helpful way to access documentation directly from the terminal.
+The man command in Linux is used to display the manual pages for other commands, programs, and system calls. It's a helpful way to access 
+documentation directly from the terminal.
 
 
 man -f grep
@@ -182,12 +184,14 @@ man ls
 
 whoami 
 ----------
-The whoami command in Linux is a simple utility that displays the username of the currently logged-in user. It’s particularly useful for confirming your identity in a multi-user environment or after switching users.
+The whoami command in Linux is a simple utility that displays the username of the currently logged-in user. It’s particularly useful for 
+confirming your identity in a multi-user environment or after switching users.
 
 
 pwd[print working directory]
 -----
-pwd command in Linux stands for "print working directory." It displays the current directory you are in when using the terminal. This is particularly useful for navigating the filesystem and ensuring you know your current location within it.
+pwd command in Linux stands for "print working directory." It displays the current directory you are in when using the terminal. This is
+particularly useful for navigating the filesystem and ensuring you know your current location within it.
 
 pwd
 
@@ -196,7 +200,8 @@ pwd
 history
 ---------
 
-The history command in Linux is used to display a list of commands that have been entered in the current shell session. It can be extremely useful for recalling previous commands, debugging, or re-running tasks without having to retype everything.
+The history command in Linux is used to display a list of commands that have been entered in the current shell session. It can be extremely 
+useful for recalling previous commands, debugging, or re-running tasks without having to retype everything.
 
 
 Display all history: history
@@ -245,7 +250,9 @@ Displays the groups that the current user belongs to.
 mkdir 
 ------
 
-The mkdir command in Linux is used to create new directories. It's a straightforward but essential command for organizing files within the filesystem. 
+The mkdir command in Linux is used to create new directories. It's a straightforward but essential command for organizing files within
+the 
+filesystem. 
 
 
 
@@ -260,7 +267,8 @@ mkdir -m 755 public
 ls
 —
 
-The ls command in Linux (and Unix-like systems) is used to list the contents of a directory. It shows files, directories, and other file system objects in a specified directory or the current working directory if no directory is specified.
+The ls command in Linux (and Unix-like systems) is used to list the contents of a directory. It shows files, directories, and other file 
+system objects in a specified directory or the current working directory if no directory is specified.
 
 
 ls
@@ -528,7 +536,8 @@ Example: rwx = 4 + 2 + 1 = 7, r-x = 4 + 0 + 1 = 5, r-- = 4 + 0 + 0 = 4
 
 chmod
 —-------
-The chmod command in Linux is used to change the permissions of files and directories. It stands for "change mode" and allows users to define who can read, write, or execute a file.
+The chmod command in Linux is used to change the permissions of files and directories. It stands for "change mode" and allows users to 
+define who can read, write, or execute a file.
 
 
 
@@ -599,7 +608,8 @@ chmod -R 444 DevOps/ → Sub directories will change
 chown  [ONLY ROOT USER can used]
 ======
 
-The chown command in Linux is used to change the ownership of files and directories. The name stands for "change owner." This command allows you to specify a new owner (and optionally a new group) for one or more files or directories.
+The chown command in Linux is used to change the ownership of files and directories. The name stands for "change owner." This command allows
+you to specify a new owner (and optionally a new group) for one or more files or directories.
 
 
 chown root devops.txt   → Run from Root
@@ -1152,7 +1162,8 @@ cal 1994
 free
 =====
 
-The free command in Linux is used to display information about the system's memory usage. It provides details about total memory, used memory, free memory, and memory used by buffers/cache, which can help you monitor how your system's RAM is being utilized.
+The free command in Linux is used to display information about the system's memory usage. It provides details about total memory, used memory,
+free memory, and memory used by buffers/cache, which can help you monitor how your system's RAM is being utilized.
 
 Useful options for the free command:
 
@@ -1197,7 +1208,8 @@ Example: Find the number of error entries in an Apache log:
 
 awk '$9 >= 400 {print $0}' access.log
 
-This command looks for HTTP status codes greater than or equal to 400 (indicating errors like 404 or 500) and prints the log entries with errors.
+This command looks for HTTP status codes greater than or equal to 400 (indicating errors like 404 or 500) and prints the log entries with
+errors.
 
 2. User Data Extraction
 -----------------------
@@ -1239,7 +1251,8 @@ create the group
 ---------------
 sudo groupadd devops
 sudo adduser kiran it will promt the total data of the user u need to enter the details.
-To add an existing user (e.g., kiran) to the newly created group (devops), use the usermod command with the -aG option, which appends the user to the specified group.
+To add an existing user (e.g., kiran) to the newly created group (devops), use the usermod command with the -aG option, which appends 
+the user to the specified group.
 sudo usermod -aG devops kiran
 if we create the new user user should be added to exisitng groups before that he doesnt get the sudo acceess.
 groups kiran
@@ -1271,7 +1284,8 @@ sudo reboot
 wget
 ====
 
-The wget command in Linux is a widely used tool for downloading files from the web. It supports downloading via HTTP, HTTPS, and FTP protocols, and it can handle things like resuming interrupted downloads or downloading multiple files at once.
+The wget command in Linux is a widely used tool for downloading files from the web. It supports downloading via HTTP, HTTPS, and FTP protocols, 
+and it can handle things like resuming interrupted downloads or downloading multiple files at once.
 
 
 Ex: wget https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
